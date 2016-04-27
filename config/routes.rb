@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  get 'rooms/show'
+  root to: 'rooms#show'
+  
+   #resources :messages, only: [:index]
+   #resources :sessions, only: [:new, :create]
+
+   #root 'sessions#new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Serve websocket cable requests in-process
-  # mount ActionCable.server => '/cable'
+  mount ActionCable.server => '/cable'
 end

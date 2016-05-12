@@ -13,14 +13,8 @@ class RoomChannel < ApplicationCable::Channel
     #ActionCable.server.broadcast 'room_channel', message: data['message']
     Message.create! content: data['message']
     
+    
   end
   
-   #private
-
-  #def render_message(message)
-    #ApplicationController.render(partial: 'messages/message',
-                                 #locals: { 
-                                  # message: message,
-                                   #username: current_user})
-  #end
+  
 end
